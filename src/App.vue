@@ -1,9 +1,11 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="topnav">
+    <router-link class="nav-link active" to="/">Home</router-link>
+    <router-link class="nav-link" to="/search">Search</router-link>
+    <router-link class="nav-link" to="/about-us">About Us</router-link>
+    <router-link class="nav-link" to="/todo">Todo</router-link>
+  </div>
+  <router-view />
 </template>
 
 <style>
@@ -11,20 +13,27 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  color: #2c3e50;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav .nav-link {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
-  color: #2c3e50;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-
-nav {
-  padding: 30px;
+.topnav .nav-link:hover {
+  background-color: #ddd;
+  color: black;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.topnav .nav-link .active {
+  background-color: #04aa6d;
+  color: white;
 }
 </style>
