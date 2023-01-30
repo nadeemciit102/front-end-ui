@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import SearchView from "../views/SearchView.vue";
 import AboutUsView from "../views/AboutUsView.vue";
 import todoView from "../views/todoView.vue";
+import CalculatorView from "../views/CalculatorView.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/todo",
     name: "todo",
     component: todoView,
+  },
+  {
+    path: "/calc",
+    name: "calculator",
+    component: CalculatorView,
   },
 ];
 
